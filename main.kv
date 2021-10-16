@@ -1,0 +1,36 @@
+#:kivy 1.0
+
+<SuperQuiz>
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: '-*- Super Quiz -*-'
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            id: pergunta
+    GridLayout:
+        cols: 1
+        rows: 4
+        Button:
+            id: alternativa1
+            on_release : root.exibirResultado(0)
+        Button:
+            id: alternativa2
+            on_release : root.exibirResultado(1)
+        Button:
+            id: alternativa3
+            on_release : root.exibirResultado(2)
+        Button:
+            id: alternativa4
+            on_release : root.exibirResultado(3)
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            id: resposta
+    Button:
+        text: 'Nova pergunta'
+        on_release: root.sortearPergunta()
+        
+
